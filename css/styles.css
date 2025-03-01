@@ -40,8 +40,10 @@ ol {
   list-style: none;
 }
 
+/* responsive images */
 img {
   display: block;
+  max-width: 100%;
 }
 
 /* Base Styles */

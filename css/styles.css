@@ -34,7 +34,6 @@
   overflow: hidden;
 }
 
-
 /* Reset Styles */
 h1,
 h2,
@@ -146,32 +145,44 @@ button {
   color: #2e2f42;
 }
 
-.nav-list, .addr-list {
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  padding: 24px 0;
+  display: block;
+  position: relative;
+}
+
+.nav-list,
+.addr-list {
   display: none;
 }
 
-   /* Address */
-  .addr {
-    font-style: normal;
-  }
-  
-  .addr-link {
-    display: block;
-  }
-  
-  address ul li a {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-  }
-  
-  address ul li a:hover,
-  address ul li a:focus,
-  address ul li a:active {
-    color: #404bbf;
-  }
+/* Address */
+.addr {
+  font-style: normal;
+}
+
+.addr-link {
+  display: block;
+}
+
+address ul li a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+address ul li a:hover,
+address ul li a:focus,
+address ul li a:active {
+  color: #404bbf;
+}
 
 .burger-btn {
   padding: 0;
@@ -189,44 +200,40 @@ button {
     display: none;
   }
 
-    /* Navigation */
-    .container .navigation {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  /* Navigation */
+  .container .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .logo {
-      padding: 24px 0;
-      margin-right: 120px;
-    }
-    
-    .navigation .nav-list {
-      display: flex;
-      gap: 40px;
-    }
-    
-    .nav-link {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
-      color: #2e2f42;
-      padding: 24px 0;
-      display: block;
-      position: relative;
-    }
-    .nav-link:hover,
-    .nav-link:focus,
-    .nav-link:active {
-      color: #404bbf;
-    }
-    .addr,
-    .addr-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-  
+  .logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
 
+  .navigation .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link:active {
+    color: #404bbf;
+  }
+  .addr,
+  .addr-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .addr,
+  .addr-list {
+    flex-direction: row;
+    gap: 40px;
+  }
 }

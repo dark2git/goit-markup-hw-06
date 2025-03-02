@@ -83,6 +83,10 @@ body {
   padding: 0 16px;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -94,10 +98,6 @@ body {
     max-width: 1158px;
     padding: 0 15px;
   }
-}
-
-button {
-  cursor: pointer;
 }
 
 /* header */
@@ -166,10 +166,6 @@ button {
   font-style: normal;
 }
 
-.addr-link {
-  display: block;
-}
-
 address ul li a {
   font-weight: 400;
   font-size: 16px;
@@ -193,6 +189,16 @@ address ul li a:active {
 .burger-icon {
   display: block;
   fill: #2f2f37;
+}
+
+.addr-link {
+  display: block;
+}
+
+@media screen and (min-width: 1158px) {
+  .addr-link {
+    padding: 24px 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -228,6 +234,7 @@ address ul li a:active {
     flex-direction: column;
     gap: 12px;
   }
+  
 }
 
 @media screen and (min-width: 1158px) {

@@ -201,6 +201,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
+}
+
 .spanlogo {
   color: #2e2f42;
 }
@@ -264,18 +270,25 @@ address ul li a:active {
   background-size: cover;
   /* for desktop padding: 188px 0;  */
   /* for tablet padding: 112px 0;  */
-  padding: 72px 0; 
+  padding: 72px 0;
+}
+
+@media (min-resolution: 2x) {
+  .section-one {
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+      url('../images/hero-pic@2x.png');
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .section-one  {
+  .section-one {
     padding: 112px 0;
     height: 436px;
   }
 }
 
 @media screen and (min-width: 1158px) {
-  .section-one  {
+  .section-one {
     padding: 188px 0;
     height: 600px;
   }
@@ -296,7 +309,7 @@ address ul li a:active {
 }
 
 @media screen and (min-width: 768px) {
-  .section-one_header  {
+  .section-one_header {
     font-size: 56px;
     line-height: 1.07143;
     max-width: 496px;
@@ -312,7 +325,9 @@ address ul li a:active {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: var(--iris);
   display: block;
-  margin: 48px auto 0;
+  /* for desktop margin: 48px auto 0; */
+  /* for desktop margin: 36px auto 0; */
+  margin: 72px auto 0;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
@@ -321,6 +336,18 @@ address ul li a:active {
   color: var(--white);
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .order-button {
+    margin: 36px auto 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .order-button {
+    margin: 48px auto 0;
+  }
 }
 
 .order-button:hover,

@@ -108,6 +108,59 @@ button {
   background: var(--white);
 }
 
+/* Navigation */
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  padding: 24px 0;
+  display: block;
+  position: relative;
+}
+
+.nav-list,
+.addr-list {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .addr,
+  .addr-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .addr,
+  .addr-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: #404bbf;
+}
+
+.container .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .is-active {
   color: var(--ocean);
 }
@@ -141,24 +194,15 @@ button {
   padding: 16px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+}
+
 .spanlogo {
   color: #2e2f42;
-}
-
-.nav-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  padding: 24px 0;
-  display: block;
-  position: relative;
-}
-
-.nav-list,
-.addr-list {
-  display: none;
 }
 
 /* Address */
@@ -180,6 +224,16 @@ address ul li a:active {
   color: #404bbf;
 }
 
+.addr-link {
+  display: block;
+}
+
+@media screen and (min-width: 1158px) {
+  .addr-link {
+    padding: 24px 0;
+  }
+}
+
 .burger-btn {
   padding: 0;
   border: none;
@@ -191,56 +245,85 @@ address ul li a:active {
   fill: #2f2f37;
 }
 
-.addr-link {
-  display: block;
-}
-
-@media screen and (min-width: 1158px) {
-  .addr-link {
-    padding: 24px 0;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .burger-btn {
     display: none;
   }
+}
 
-  /* Navigation */
-  .container .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+/* Hero Section (Section One) */
+.section-one {
+  height: 432px;
+  background-color: var(--navy-blue);
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+    url(../images/hero-pic.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* for desktop padding: 188px 0;  */
+  /* for tablet padding: 112px 0;  */
+  padding: 72px 0; 
+}
 
-  .logo {
-    padding: 24px 0;
-    margin-right: 120px;
+@media screen and (min-width: 768px) {
+  .section-one  {
+    padding: 112px 0;
+    height: 436px;
   }
-
-  .navigation .nav-list {
-    display: flex;
-    gap: 40px;
-  }
-
-  .nav-link:hover,
-  .nav-link:focus,
-  .nav-link:active {
-    color: #404bbf;
-  }
-  .addr,
-  .addr-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
 }
 
 @media screen and (min-width: 1158px) {
-  .addr,
-  .addr-list {
-    flex-direction: row;
-    gap: 40px;
+  .section-one  {
+    padding: 188px 0;
+    height: 600px;
   }
+}
+
+.section-one_header {
+  font-family: var(--font-family);
+  font-weight: 700;
+  /* for desktop & tablet font-size: 56px; */
+  font-size: 36px;
+  /* for desktop & tablet line-height: 1.07143; */
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--white);
+  max-width: 216px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .section-one_header  {
+    font-size: 56px;
+    line-height: 1.07143;
+    max-width: 496px;
+  }
+}
+
+/* border: none; для вимкнення стандартного оформлення кнопки */
+.order-button {
+  cursor: pointer;
+  border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: var(--iris);
+  display: block;
+  margin: 48px auto 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-button:hover,
+.order-button:focus {
+  background-color: #404bbf;
 }

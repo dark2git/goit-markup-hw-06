@@ -725,6 +725,13 @@ address ul li a:active {
   padding-bottom: 96px;
 }
 
+@media screen and (min-width: 1158px) {
+  .section-two {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
 .sec-two-list {
   display: flex;
   flex-direction: column;
@@ -771,12 +778,10 @@ address ul li a:active {
   }
 }
 
-
 .sec-two-list-item .sec-head,
 .sec-two-list-item .sec-par {
   text-align: start;
 }
-
 
 .sec-two-list-item .sec-head {
   margin-bottom: 8px;
@@ -804,7 +809,7 @@ address ul li a:active {
 
 .sec-two-list-item .sec-par {
   font-family: var(--font-family);
-  font-weight: 500;  /* for desktop 400*/
+  font-weight: 500; /* for desktop 400*/
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -819,8 +824,17 @@ address ul li a:active {
 
 /* Team Section (Section Three) */
 .section-three {
-  height: 780px;
+  height: auto;
   background: var(--cloud);
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1158px) {
+  .section-three {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .sec-main-header {
@@ -835,21 +849,46 @@ address ul li a:active {
   color: var(--navy-blue);
 }
 
+
 .sec-three_list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 72px;
 }
+
+@media screen and (min-width: 768px) {
+  .sec-three_list {
+    row-gap: 64px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+} 
 
 .sec-three_list-item {
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
   padding: 0px 0px 32px 0px;
-  flex-basis: calc(100% - (3 * 24px) / 4); /* for desktop */
   height: 428px;
+  max-width: 264px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: var(--white);
 }
+
+@media screen and (min-width: 768px) {
+  .sec-three_list-item {
+    flex-basis: calc((100% - (1 * 24px)) / 2);
+  }
+} 
+
+
+@media screen and (min-width: 1158px) {
+  .sec-three_list-item {
+    flex-basis: calc((100% - (3 * 24px)) / 4);
+  }
+} 
 
 .name_and_position {
   margin: 0 auto;
@@ -858,4 +897,11 @@ address ul li a:active {
   height: 104px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
+
+.section-three .sec-par {
+  display: block;
+  margin-bottom: 8px;
+}
+

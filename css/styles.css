@@ -728,26 +728,49 @@ address ul li a:active {
 .sec-two-list {
   display: flex;
   flex-direction: column;
-  width: auto;
-  /* gap: 24px; for desktop */
+  gap: 72px;
 }
 
-/* for desktop */
-/* .sec-two-list-item {
-  flex-basis: calc(100% - (3 * 24px) / 4);
-} */
+@media screen and (min-width: 768px) {
+  .sec-two-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
 
 .rectangle {
   border: 1px solid var(--light-slate);
   border-radius: 4px;
-  width: 264px;
+  width: auto;
   height: 112px;
   background: var(--cloud);
-  display: none; /* for desktop display: flex; flex-direction: row; */
+  display: none; /* for desktop display: flex; */
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
 }
+
+@media screen and (min-width: 1158px) {
+  .rectangle {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sec-two-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .sec-two-list-item {
+    flex-basis: calc((100% - (3 * 24px)) / 4);
+  }
+}
+
 
 .sec-two-list-item .sec-head,
 .sec-two-list-item .sec-par {
@@ -766,6 +789,13 @@ address ul li a:active {
   text-align: center; /* for mobile only */
 }
 
+@media screen and (min-width: 1158px) {
+  .sec-two-list-item .sec-head {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .sec-two-list-item .sec-head {
     text-align: start;
@@ -779,4 +809,10 @@ address ul li a:active {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+}
+
+@media screen and (min-width: 1158px) {
+  .sec-two-list-item .sec-par {
+    font-weight: 400;
+  }
 }

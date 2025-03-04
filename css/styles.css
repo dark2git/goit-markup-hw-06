@@ -332,10 +332,6 @@ address ul li a:active {
   transform: translateX(0);  /* Виїзд */
 }
 
-.mobile-menu:not(.is-open) .modal {
-  transform: translate(-50%, 100%) scale(0.5);
-}
-
 .mobile-menu-container {
   position: relative;
   padding-top: 72px;

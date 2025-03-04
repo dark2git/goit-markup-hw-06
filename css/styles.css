@@ -422,12 +422,19 @@ address ul li a:active {
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  width: 408px;
+  width: 288px;
+  /* for tablet + desktop width: 408px; */
   min-height: 584px;
   padding: 72px 16px 24px; /* for mobile */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
+}
 
 .close-button {
   height: 24px;
@@ -469,7 +476,7 @@ address ul li a:active {
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 360px;
+  width: auto;
 }
 
 .modal-header {
@@ -481,7 +488,7 @@ address ul li a:active {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--navy-blue);
-  width: 360px;
+  width: auto;
   height: 24px;
   margin-bottom: 16px;
 }
@@ -567,7 +574,7 @@ address ul li a:active {
 }
 
 .privacy {
-  width: 360px;
+  width: auto;
   margin-bottom: 24px;
 }
 

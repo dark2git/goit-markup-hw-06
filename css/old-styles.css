@@ -50,56 +50,6 @@
   background-color: #404bbf;
 }
 
-/* Features Section (Section Two) */
-.section-two {
-  height: 464px;
-}
-
-.sec-two-list {
-  display: flex;
-  gap: 24px;
-}
-
-.sec-two-list-item {
-  flex-basis: calc(100% - (3 * 24px) / 4);
-}
-
-.rectangle {
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-  background: var(--cloud);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-}
-
-.sec-two-list-item .sec-head,
-.sec-two-list-item .sec-par {
-  text-align: start;
-}
-
-.sec-two-list-item .sec-head {
-  margin-bottom: 8px;
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue);
-}
-
-.sec-two-list-item .sec-par {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--slate);
-}
-
 /* Team Section (Section Three) */
 .section-three {
   height: 780px;

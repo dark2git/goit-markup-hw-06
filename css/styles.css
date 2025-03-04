@@ -385,6 +385,49 @@ address ul li a:active {
   color: var(--iris);
 }
 
+/* Overlay */
+.backdrop {
+  background: var(--navy-blue-modal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.backdrop:not(.is-open) .modal {
+  transform: translate(-50%, -100%) scale(0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--dairy);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  width: 408px;
+  min-height: 584px;
+  padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .close-button {
   height: 24px;
   width: 24px;
@@ -419,6 +462,156 @@ address ul li a:active {
 .close-button:hover .close-icon,
 .close-button:focus .close-icon {
   fill: var(--white);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 360px;
+}
+
+.modal-header {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--navy-blue);
+  width: 360px;
+  height: 24px;
+  margin-bottom: 16px;
+}
+
+.input-group {
+  margin-bottom: 8px;
+}
+
+.fieldset-label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+  display: block;
+  margin-bottom: 4px;
+  user-select: none;
+}
+
+.form-input {
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--navy-blue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus,
+.form-input:hover,
+.modal-form-textarea:hover,
+.modal-form-textarea:focus {
+  outline: none;
+  border-color: var(--iris);
+}
+
+.form-input:focus + .input-icon,
+.form-input:hover + .input-icon {
+  fill: var(--iris);
+}
+
+.textarea-container {
+  margin-bottom: 16px;
+}
+
+.modal-form-textarea {
+  resize: none;
+  padding: 8px 16px;
+  border: 1px solid var(--navy-blue-modal);
+  color: var(--navy-blue-modal);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  display: block;
+  outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-textarea::placeholder {
+  color: var(--navy-blue-modal);
+}
+
+.privacy {
+  width: 360px;
+  margin-bottom: 24px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--navy-blue-modal);
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+}
+
+.agreement-checkbox:checked + label .custom-checkbox {
+  border: none;
+  background-color: var(--ocean);
+  fill: var(--cloud);
+}
+
+.label-agreement {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+  user-select: none;
+}
+
+.form-link {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--iris);
+}
+
+.modal-form .order-button {
+  text-align: center;
+  margin-top: 0;
 }
 
 /* Hero Section (Section One) */

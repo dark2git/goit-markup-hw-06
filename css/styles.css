@@ -77,6 +77,37 @@ body {
 }
 
 /* common */
+.sec-head {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  margin-bottom: 8px;
+}
+
+.sec-par {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--slate);
+  margin-bottom: 8px;
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
 .container {
   max-width: 320px;
   margin: 0 auto;
@@ -647,7 +678,7 @@ address ul li a:active {
 
 @media screen and (min-width: 768px) {
   .section-one {
-    padding: 112px 0;
+    padding-top: 112px 0;
     height: 436px;
   }
 }
@@ -900,8 +931,85 @@ address ul li a:active {
   text-align: center;
 }
 
-.section-three .sec-par {
-  display: block;
-  margin-bottom: 8px;
+/* Portfolio Section (Section Four) */
+.section-four {
+  min-height: 1240px;
 }
 
+.sec-four_list {
+  display: flex;
+  gap: 24px;
+  row-gap: 48px;
+  flex-wrap: wrap;
+}
+
+.sec-four_list-item {
+  height: 420px;
+  max-width: 288px;
+  box-shadow: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .sec-four_list-item {
+    flex-basis: calc((100% - (1 * 24px)) / 2);
+  }
+} 
+
+.sec-four_list-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--iris);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px;
+  color: var(--cloud);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sec-four_list-item:hover .overlay {
+  transform: translateY(0%);
+}
+
+.section-four .sec-four_list-item img {
+  height: 300px;
+  width: 360px;
+}
+
+.sec-four_list-item .sec-head,
+.sec-four_list-item .sec-par {
+  text-align: start;
+}
+
+.card-info {
+  border-bottom: 1px solid var(--cornflower);
+  border-left: 1px solid var(--cornflower);
+  border-right: 1px solid var(--cornflower);
+  padding: 32px 16px;
+  width: 360px;
+  height: 120px;
+  box-shadow: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sec-four_list-item:hover .card-info {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}

@@ -50,49 +50,6 @@
   background-color: #404bbf;
 }
 
-/* Team Section (Section Three) */
-.section-three {
-  height: 780px;
-  background: var(--cloud);
-}
-
-.sec-main-header {
-  line-height: 1.11;
-  text-transform: capitalize;
-  margin-bottom: 72px;
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--navy-blue);
-}
-
-.sec-three_list {
-  display: flex;
-  gap: 24px;
-}
-
-.sec-three_list-item {
-  background-color: #ffffff;
-  border-radius: 0 0 4px 4px;
-  padding: 0px 0px 32px 0px;
-  flex-basis: calc(100% - (3 * 24px) / 4);
-  height: 428px;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background: var(--white);
-}
-
-.name_and_position {
-  margin: 0 auto;
-  padding: 32px 0;
-  width: 232px;
-  height: 104px;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Portfolio Section (Section Four) */
 .section-four {
   min-height: 1240px;
@@ -170,28 +127,7 @@
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-/* Common Section Styles */
-.sec-head {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--navy-blue);
-  margin-bottom: 8px;
-}
 
-.sec-par {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--slate);
-  margin-bottom: 8px;
-}
 
 /* Footer */
 .basement {

@@ -344,7 +344,7 @@ address ul li a:active {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100svh;
+  height: 100dvh;
   z-index: 999;
   background-color: #fff;
   opacity: 0;
@@ -369,7 +369,7 @@ address ul li a:active {
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  height: 100svh;
+  height: 100dvh;
 }
 
 .mobile-menu .nav-list {
@@ -423,7 +423,7 @@ address ul li a:active {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   z-index: 999;
   display: flex;
   justify-content: center;

@@ -1044,27 +1044,40 @@ address ul li a:active {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: baseline;
+  width: 584px;
 }
 
 @media screen and (min-width: 768px) {
   .basement .container {
     flex-direction: row;
     column-gap: 24px;
-    margin-right: 108px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .basement .container {
+    width: 1158px;
+    justify-content: space-between;
   }
 }
 
 .logo-section {
   height: 112px;
-  width: 264px;
+  width: 288px;
   margin-bottom: 72px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-section {
+    text-align: start;
+  }
 }
 
 
 .basement .logo {
   margin-bottom: 16px;
-  padding: 0 10px 0 0;
+  padding: 0;
   display: inline-block;
   font-family: var(--second-family);
   font-weight: 700;
@@ -1118,7 +1131,7 @@ address ul li a:active {
 
 .basement-paragraph {
   color: #f4f4fd;
-  width: 264px;
+  width: 288px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
@@ -1126,6 +1139,12 @@ address ul li a:active {
   letter-spacing: 0.02em;
   color: var(--cloud);
   text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .basement-paragraph {
+    width: 264px;
+  }
 }
 
 .basement .svg-link:focus,

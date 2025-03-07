@@ -1046,6 +1046,12 @@ address ul li a:active {
   justify-content: center;
 }
 
+@media (min-width: 768px) and (max-width: 1156px) {
+  .basement .container {
+    max-width: 600px;
+  }
+}
+
 /* Mobile first approach */
 .logo-section {
   flex-basis: 288px;

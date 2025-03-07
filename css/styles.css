@@ -1309,6 +1309,7 @@ address ul li a:active {
 
 .footer-input::placeholder {
   color: var(--white);
+  opacity: 0.6;
 }
 
 .send-button {

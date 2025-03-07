@@ -711,7 +711,7 @@ address ul li a:active {
   @media (min-resolution: 2x){
     .section-one {
       background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
-      url(../images/hero-pic@2x.png);
+      url(../images/hero-pic@2x.jpg);
     }
     }
 }

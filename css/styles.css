@@ -614,6 +614,7 @@ address ul li a:active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -640,6 +641,8 @@ address ul li a:active {
   letter-spacing: 0.04em;
   color: var(--light-slate);
   user-select: none;
+  display: flex;
+  align-items: center;
 }
 
 .form-link {

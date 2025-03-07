@@ -1,4 +1,4 @@
-/* #region Custom Properties */
+/* #region Custom Properties (:root) */
 :root {
   --font-family: 'Roboto', sans-serif;
   --second-family: 'Raleway', sans-serif;
@@ -671,19 +671,17 @@ address ul li a:active {
   max-width: 1440px;
   margin: 0 auto;
   background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
-    url(../images/hero-pic.jpg);
+    url(../images/mobile/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* for desktop padding: 188px 0;  */
-  /* for tablet padding: 112px 0;  */
   padding: 72px 0;
 }
 
 @media (min-resolution: 2x) {
   .section-one {
     background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
-      url('../images/hero-pic@2x.png');
+      url('../images/mobile/hero-mobile@2x.jpg');
   }
 }
 
@@ -691,14 +689,31 @@ address ul li a:active {
   .section-one {
     padding-top: 112px 0;
     height: 436px;
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+    url(../images/tablet/hero-tablet.jpg);
   }
+
+  @media (min-resolution: 2x){
+    .section-one {
+      background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+      url(../images/tablet/hero-tablet@2x.jpg);
+    }
+    }
 }
 
 @media screen and (min-width: 1158px) {
   .section-one {
     padding: 188px 0;
     height: 600px;
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+    url(../images/hero-pic.jpg);
   }
+  @media (min-resolution: 2x){
+    .section-one {
+      background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+      url(../images/hero-pic@2x.png);
+    }
+    }
 }
 
 .section-one_header {
@@ -993,7 +1008,6 @@ address ul li a:active {
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 }
-
 
 .overlay-container {
   position: relative;

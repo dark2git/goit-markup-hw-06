@@ -1,4 +1,4 @@
-/* Custom Properties */
+/* #region Custom Properties */
 :root {
   --font-family: 'Roboto', sans-serif;
   --second-family: 'Raleway', sans-serif;
@@ -15,8 +15,9 @@
   --white: #fff;
   --dairy: #fcfcfc;
 }
+/* #endregion */
 
-/* hide */
+/* #region hide */
 .hidden {
   display: none;
 }
@@ -33,8 +34,9 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* #endregion */
 
-/* Reset Styles */
+/* #region Reset Styles */
 h1,
 h2,
 h3,
@@ -64,6 +66,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* #endregion */
+
+/* #region common */
+.sec-head {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  margin-bottom: 8px;
+}
 
 /* Base Styles */
 body {
@@ -74,17 +88,6 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
   background-color: #ffffff;
-}
-
-/* common */
-.sec-head {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue);
-  margin-bottom: 8px;
 }
 
 .sec-par {
@@ -130,14 +133,16 @@ button {
     padding: 0 15px;
   }
 }
+/* #endregion */
 
-/* header */
+/* #region header */
 .header {
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
   background: var(--white);
 }
+
 
 /* Navigation */
 .nav-link {
@@ -323,8 +328,9 @@ address ul li a:active {
 .social-icon {
   fill: var(--cloud);
 }
+/* #endregion */
 
-/* mobile-menu */
+/* #region mobile-menu */
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
@@ -415,9 +421,9 @@ address ul li a:active {
 .menu-addr-link:hover,
 .menu-addr-link:active {
   color: var(--iris);
-}
+} /* #endregion */
 
-/* Overlay */
+/*#region Overlay */
 .backdrop {
   background: var(--navy-blue-modal);
   position: fixed;
@@ -656,8 +662,9 @@ address ul li a:active {
   text-align: center;
   margin-top: 0;
 }
+/* #endregion */
 
-/* Hero Section (Section One) */
+/* #region Hero Section (Section One) */
 .section-one {
   height: 432px;
   background-color: var(--navy-blue);
@@ -752,8 +759,9 @@ address ul li a:active {
 .order-button:focus {
   background-color: #404bbf;
 }
+/* #endregion */
 
-/* Features Section (Section Two) */
+/*#region  Features Section (Section Two) */
 .section-two {
   height: auto;
   padding-top: 96px;
@@ -856,8 +864,9 @@ address ul li a:active {
     font-weight: 400;
   }
 }
+/* #endregion */
 
-/* Team Section (Section Three) */
+/* #region Team Section (Section Three) */
 .section-three {
   height: auto;
   background: var(--cloud);
@@ -933,8 +942,9 @@ address ul li a:active {
   flex-direction: column;
   text-align: center;
 }
+/* #endregion */
 
-/* Portfolio Section (Section Four) */
+/* #region Portfolio Section (Section Four) */
 .section-four {
   min-height: 1240px;
 }
@@ -1035,8 +1045,9 @@ address ul li a:active {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+/* #endregion */
 
-/* Footer */
+/* #region Footer */
 .basement {
   background-color: #2e2f42;
 }
@@ -1055,7 +1066,6 @@ address ul li a:active {
   }
 }
 
-/* Mobile first approach */
 .logo-section {
   flex-basis: 288px;
   width: 288px;
@@ -1137,7 +1147,7 @@ address ul li a:active {
   }
 }
 
-/* Logo section styling */
+
 .basement .logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -1305,3 +1315,4 @@ address ul li a:active {
   fill: var(--white);
   margin-left: 16px;
 }
+/* #endregion */
